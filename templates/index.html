@@ -1,0 +1,38 @@
+<!doctype html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Miguel Alcubierre</title>
+	
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+
+</head>
+
+<h1>BERT Sentiment Analyser</h1>
+
+<body>
+
+<div class="main">
+	<form class="pure-form" method="POST" action="/">
+	Text to analyse for sentiment:	</br>
+	<textarea name="sentiment" rows="10" cols="30">Enter your text here...</textarea>	
+	<button type="submit" class="pure-button pure-button-primary" value="Submit">Submit</button>
+	</form>
+</div>
+
+<br>
+
+<div class="main">
+	{% if sentiment %}
+	    <p>You entered: {{ sentiment }}</p>
+	{% endif %}
+	{% if op_sent %}
+	    <p>The sentiment of the paragraph entered seems to be primarily: {{ op_sent }}</p>
+	{% endif %}
+	
+</div>
+
+</body>
